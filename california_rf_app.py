@@ -17,7 +17,14 @@ from sklearn.datasets import fetch_california_housing
 st.set_page_config(page_title="California Housing × RandomForest", layout="wide")
 
 # 0) データセットの説明（大学生向け）
-st.title("🏠 California Housing × RandomForest（回帰）")
+st.markdown(
+    """
+    <h3 style="font-size:22px; margin-bottom:8px;">
+    🏠 California Housing × RandomForest（回帰）雑草研・システム研　統計ゼミ
+    </h3>
+    """,
+    unsafe_allow_html=True,
+)
 st.markdown(
     """
     本アプリは **California Housing**（米カリフォルニア州・18940地区）の住宅価格（中央値, ×100,000 USD）を  
@@ -253,3 +260,4 @@ matplotlib>=3.8
 """
 with st.expander("📦 requirements.txt (コピー用)"):
     st.code(REQ_TXT.strip())
+
